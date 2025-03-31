@@ -1,6 +1,5 @@
 
 import React from 'react';
-import GradientBackground from '@/components/GradientBackground';
 import AnimatedName from '@/components/AnimatedName';
 import ProjectGrid from '@/components/ProjectGrid';
 import { projects } from '@/data/projects';
@@ -15,26 +14,25 @@ const Index = () => {
   }));
 
   return (
-    <GradientBackground className="flex flex-col min-h-screen">
-      <div className="container mx-auto px-4 py-20 flex-grow">
-        <header className="mb-20 animate-fade-in">
-          <AnimatedName name="Keyaa Kapadia" />
-          <div className="mt-8 max-w-2xl">
-            <p className="text-xl text-portfolio-deep-navy leading-relaxed">
-              I'm a graphic designer specializing in creating intentional, structured, and effective visual solutions.
-              With experience across UX design, web development, book design, and marketing, I bring a multidisciplinary approach to every project.
+    <div className="min-h-screen bg-black">
+      <div className="container mx-auto px-4 py-10">
+        {/* Header with name in top right and intro */}
+        <header className="flex flex-col items-end mb-16 pt-6 animate-fade-in">
+          <div className="text-right">
+            <h1 className="text-4xl md:text-5xl font-bold text-white mb-2">Keyaa Kapadia</h1>
+            <p className="text-portfolio-lavender-gray text-lg max-w-md">
+              Graphic designer specializing in creating intentional, structured, and effective visual solutions.
             </p>
           </div>
         </header>
 
         <main>
-          <section className="mb-20 animate-fade-in" style={{ animationDelay: '0.2s' }}>
-            <h2 className="text-2xl font-semibold mb-6 text-portfolio-dark-blue">My Work</h2>
+          <section className="animate-fade-in" style={{ animationDelay: '0.2s' }}>
             <ProjectGrid projects={projectCards} />
           </section>
         </main>
       </div>
-    </GradientBackground>
+    </div>
   );
 };
 

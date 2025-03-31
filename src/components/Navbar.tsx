@@ -13,20 +13,20 @@ const Navbar = () => {
       <div className="container mx-auto flex justify-between items-center">
         <Link 
           to="/" 
-          className="text-portfolio-deep-navy font-semibold text-xl tracking-tight hover:text-portfolio-dark-blue transition-colors"
+          className="text-white font-semibold text-xl tracking-tight hover:text-portfolio-lavender-gray transition-colors"
         >
           KK
         </Link>
         <div className="space-x-6">
           <Link 
             to="/" 
-            className="text-portfolio-deep-navy hover:text-portfolio-dark-blue transition-colors"
+            className="text-white hover:text-portfolio-lavender-gray transition-colors"
           >
             Work
           </Link>
           <Link 
             to="/about" 
-            className="text-portfolio-deep-navy hover:text-portfolio-dark-blue transition-colors"
+            className="text-white hover:text-portfolio-lavender-gray transition-colors"
           >
             About
           </Link>
