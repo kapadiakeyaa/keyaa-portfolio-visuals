@@ -1,26 +1,27 @@
-import { useLocation } from "react-router-dom";
-import { useEffect } from "react";
+
+import React from "react";
+import { useLocation, useNavigate } from "react-router-dom";
+import GradientBackground from '@/components/GradientBackground';
 
 const NotFound = () => {
   const location = useLocation();
-
-  useEffect(() => {
-    console.error(
-      "404 Error: User attempted to access non-existent route:",
-      location.pathname
-    );
-  }, [location.pathname]);
+  const navigate = useNavigate();
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
+    <GradientBackground className="flex items-center justify-center">
       <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">404</h1>
-        <p className="text-xl text-gray-600 mb-4">Oops! Page not found</p>
-        <a href="/" className="text-blue-500 hover:text-blue-700 underline">
+        <h1 className="text-6xl font-bold mb-4 text-portfolio-deep-navy">404</h1>
+        <p className="text-xl text-portfolio-muted-gray mb-8">
+          The page at {location.pathname} cannot be found.
+        </p>
+        <button 
+          onClick={() => navigate('/')}
+          className="px-6 py-3 bg-portfolio-dark-blue text-white rounded-md hover:bg-portfolio-deep-navy transition-colors"
+        >
           Return to Home
-        </a>
+        </button>
       </div>
-    </div>
+    </GradientBackground>
   );
 };
 
