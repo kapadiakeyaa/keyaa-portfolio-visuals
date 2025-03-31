@@ -16,11 +16,11 @@ const ProjectCard = ({ id, title, category, thumbnail, className }: ProjectCardP
     <Link 
       to={`/project/${id}`}
       className={cn(
-        "group relative overflow-hidden rounded-md transition-all duration-300 hover-glow",
+        "group block relative overflow-hidden rounded-lg transition-all duration-300 hover-glow h-full",
         className
       )}
     >
-      <div className="aspect-square overflow-hidden bg-muted">
+      <div className="h-full w-full overflow-hidden bg-muted">
         <img 
           src={thumbnail} 
           alt={title} 

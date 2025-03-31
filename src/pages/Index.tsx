@@ -1,6 +1,5 @@
 
 import React from 'react';
-import AnimatedName from '@/components/AnimatedName';
 import ProjectGrid from '@/components/ProjectGrid';
 import { projects } from '@/data/projects';
 

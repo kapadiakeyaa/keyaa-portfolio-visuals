@@ -1,4 +1,3 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -58,6 +57,39 @@
 }
 
 @layer components {
+  .projects-stack {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 0;
+  }
+
+  .project-stack-item {
+    position: relative;
+    aspect-ratio: 1;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .project-stack-item:hover {
+    transform: translateY(-10px);
+    z-index: 10;
+    box-shadow: 0 10px 30px rgba(190, 178, 200, 0.3);
+  }
+
+  @media (max-width: 1024px) {
+    .projects-stack {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 640px) {
+    .projects-stack {
+      grid-template-columns: 1fr;
+    }
+  }
+
   .project-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
