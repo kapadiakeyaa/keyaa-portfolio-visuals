@@ -4,7 +4,7 @@ import { cn } from '@/lib/utils';
 
 // Array of gradient combinations using our color palette
 const backgroundGradients = [
-  'from-portfolio-light-gray via-portfolio-lavender-gray to-portfolio-muted-gray',
+  'from-portfolio-dark-blue via-portfolio-lavender-gray to-portfolio-muted-gray',
   'from-portfolio-lavender-gray via-portfolio-muted-gray to-portfolio-deep-navy',
   'from-portfolio-muted-gray via-portfolio-light-gray to-portfolio-dark-blue',
   'from-portfolio-light-gray via-portfolio-dark-blue to-portfolio-deep-navy',
@@ -27,10 +27,17 @@ const GradientBackground = ({
 
   return (
     <div className={cn(
-      `min-h-screen bg-gradient-to-br ${gradient} gradient-background`,
+      `relative min-h-screen overflow-hidden`,
       className
     )}>
-      {children}
+      <div className="absolute inset-0 bg-black opacity-90 z-0"></div>
+      <div className={cn(
+        `absolute inset-0 bg-gradient-to-br ${gradient} opacity-20 animate-gradient-shift z-0`,
+        className
+      )}></div>
+      <div className="relative z-10">
+        {children}
+      </div>
     </div>
   );
 };

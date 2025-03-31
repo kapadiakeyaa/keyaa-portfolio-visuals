@@ -8,11 +8,15 @@ interface ProjectGridProps {
 
 const ProjectGrid = ({ projects }: ProjectGridProps) => {
   return (
-    <div className="projects-stack">
-      {projects.map((project) => (
+    <div className="project-stack-container">
+      {projects.map((project, index) => (
         <div 
           key={project.id}
-          className="project-stack-item"
+          className="project-stack-card"
+          style={{ 
+            zIndex: projects.length - index,
+            top: `${index * 20}px`
+          }}
         >
           <ProjectCard
             id={project.id}

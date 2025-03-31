@@ -2,7 +2,7 @@
 export interface Project {
   id: string;
   title: string;
-  category: 'UX Case Study' | 'Website' | 'Book Design' | 'Marketing';
+  category: 'UX Case Study' | 'Website' | 'Book Design' | 'Marketing' | 'Branding';
   thumbnail: string;
   description: string;
   content: {
@@ -179,6 +179,55 @@ export const projects: Project[] = [
         {
           url: 'https://images.unsplash.com/photo-1530036846522-74f9e3b19d37?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80',
           caption: 'Product packaging and in-store display designs'
+        }
+      ]
+    }
+  },
+  // New branding projects
+  {
+    id: 'branding-1',
+    title: 'Luxury Resort Rebrand',
+    category: 'Branding',
+    thumbnail: 'https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80',
+    description: 'Complete brand refresh for an upscale resort destination',
+    content: {
+      introduction: 'This comprehensive rebrand for a luxury resort chain included a new visual identity system, custom typography, brand guidelines, and collateral materials. The goal was to position the resort as a premier destination for discerning travelers seeking authentic, immersive experiences.',
+      images: [
+        {
+          url: 'https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80',
+          caption: 'Brand identity system and logo variations'
+        },
+        {
+          url: 'https://images.unsplash.com/photo-1534531173927-aeb928d54385?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80',
+          caption: 'Custom typography and color palette applications'
+        },
+        {
+          url: 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80',
+          caption: 'Brand collateral and print materials'
+        }
+      ]
+    }
+  },
+  {
+    id: 'branding-2',
+    title: 'Tech Startup Identity',
+    category: 'Branding',
+    thumbnail: 'https://images.unsplash.com/photo-1523726491678-bf852e717f6a?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80',
+    description: 'Brand identity for an emerging technology company',
+    content: {
+      introduction: 'This brand identity project for a tech startup focused on creating a modern, distinctive visual language that would help the company stand out in a competitive market. The approach emphasized innovation and forward-thinking through geometric shapes, bold typography, and a vibrant color palette.',
+      images: [
+        {
+          url: 'https://images.unsplash.com/photo-1523726491678-bf852e717f6a?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80',
+          caption: 'Logo development process and final mark'
+        },
+        {
+          url: 'https://images.unsplash.com/photo-1569017388730-020b5f80a004?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80',
+          caption: 'Digital brand applications and UI elements'
+        },
+        {
+          url: 'https://images.unsplash.com/photo-1606761568499-6d2451b23c66?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80',
+          caption: 'Marketing materials and social media presence'
         }
       ]
     }

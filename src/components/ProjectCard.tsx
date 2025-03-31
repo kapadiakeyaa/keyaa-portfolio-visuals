@@ -1,5 +1,5 @@
 
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { cn } from '@/lib/utils';
 
@@ -12,13 +12,18 @@ export interface ProjectCardProps {
 }
 
 const ProjectCard = ({ id, title, category, thumbnail, className }: ProjectCardProps) => {
+  const [isHovered, setIsHovered] = useState(false);
+  
   return (
     <Link 
       to={`/project/${id}`}
       className={cn(
-        "group block relative overflow-hidden rounded-lg transition-all duration-300 hover-glow h-full",
+        "group block relative overflow-hidden rounded-lg transition-all duration-500 hover-glow h-full w-full",
+        isHovered ? "card-active" : "",
         className
       )}
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
     >
       <div className="h-full w-full overflow-hidden bg-muted">
         <img 
