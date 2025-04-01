@@ -51,22 +51,22 @@ const StackedProjectCards: React.FC<StackedProjectCardsProps> = ({ projects }) =
     }
     
     if (index === hoveredIndex) {
-      // Hovered card comes forward
+      // Hovered card comes forward - more drastic animation
       return {
-        transform: `translateY(${index * 20}px) scale(1.05) translateZ(40px)`,
+        transform: `translateY(${index * 20}px) scale(1.1) translateZ(60px)`,
         zIndex: projects.length + 1,
-        boxShadow: '0 10px 30px rgba(0, 0, 0, 0.3)',
+        boxShadow: '0 20px 40px rgba(0, 0, 0, 0.4)',
       };
     } else if (index < hoveredIndex) {
-      // Cards above the hovered card move slightly higher
+      // Cards above the hovered card move higher - more drastic
       return {
-        transform: `translateY(${index * 20 - 15}px)`,
+        transform: `translateY(${index * 20 - 30}px)`,
         zIndex: baseZIndex,
       };
     } else {
-      // Cards below the hovered card move slightly lower
+      // Cards below the hovered card move lower - more drastic
       return {
-        transform: `translateY(${index * 20 + 15}px)`,
+        transform: `translateY(${index * 20 + 30}px)`,
         zIndex: baseZIndex,
       };
     }
@@ -74,7 +74,7 @@ const StackedProjectCards: React.FC<StackedProjectCardsProps> = ({ projects }) =
 
   return (
     <div 
-      className="stacked-cards-container w-full max-w-3xl mx-auto h-[70vh] relative perspective-1000"
+      className="stacked-cards-container w-full max-w-4xl mx-auto h-[80vh] relative perspective-1000"
       onMouseLeave={handleMouseLeave}
     >
       {projects.map((project, index) => {
@@ -88,7 +88,7 @@ const StackedProjectCards: React.FC<StackedProjectCardsProps> = ({ projects }) =
             className={`absolute w-full bg-white border border-gray-200 rounded-lg overflow-hidden preserve-3d transition-all duration-500 ease-in-out 
               ${activeCard === index ? 'card-active' : ''}`}
             style={{
-              height: '400px',
+              height: '500px', // Increased card height
               ...getCardStyle(index),
               transition: 'all 0.5s cubic-bezier(0.23, 1, 0.32, 1)',
             }}
@@ -96,30 +96,30 @@ const StackedProjectCards: React.FC<StackedProjectCardsProps> = ({ projects }) =
             onClick={() => handleCardClick(index)}
           >
             {isNameCard ? (
-              // Name card with flip effect
+              // Name card with flip effect - black background
               <div className="relative w-full h-full preserve-3d">
                 {/* Front of card (Name) */}
                 <motion.div 
-                  className={`absolute w-full h-full backface-hidden p-6 flex flex-col justify-center items-center bg-white hover-glow
+                  className={`absolute w-full h-full backface-hidden p-6 flex flex-col justify-center items-center bg-black hover-glow
                     ${isFlipped ? 'rotate-y-180' : 'rotate-y-0'}`}
                   animate={{ rotateY: isFlipped ? 180 : 0 }}
                   transition={{ duration: 0.6, ease: "easeInOut" }}
                 >
-                  <h1 className="text-4xl md:text-5xl font-bold text-portfolio-dark-blue name-display mb-2">
+                  <h1 className="text-5xl md:text-6xl font-bold text-white name-display mb-2">
                     {project.title}
                   </h1>
-                  <p className="text-xl text-portfolio-muted-gray mt-2">{project.category}</p>
+                  <p className="text-2xl text-gray-400 mt-2">{project.category}</p>
                 </motion.div>
 
                 {/* Back of card (Bio) */}
                 <motion.div 
-                  className={`absolute w-full h-full backface-hidden p-6 flex flex-col justify-center items-center bg-white hover-glow
+                  className={`absolute w-full h-full backface-hidden p-6 flex flex-col justify-center items-center bg-black hover-glow
                     ${isFlipped ? 'rotate-y-0' : 'rotate-y-180'}`}
                   animate={{ rotateY: isFlipped ? 0 : -180 }}
                   transition={{ duration: 0.6, ease: "easeInOut" }}
                 >
-                  <h2 className="text-2xl font-semibold mb-4 text-portfolio-dark-blue">About Me</h2>
-                  <p className="text-lg text-portfolio-muted-gray text-center">
+                  <h2 className="text-2xl font-semibold mb-4 text-white">About Me</h2>
+                  <p className="text-lg text-gray-300 text-center">
                     I'm a passionate graphic designer specializing in UX/UI design, branding, 
                     and book design. My work combines creativity with strategic thinking to 
                     deliver impactful visual experiences.
