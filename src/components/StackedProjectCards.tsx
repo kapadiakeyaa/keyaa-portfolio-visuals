@@ -85,7 +85,7 @@ const StackedProjectCards: React.FC<StackedProjectCardsProps> = ({ projects }) =
           <div
             key={project.id}
             ref={el => cardsRef.current[index] = el}
-            className={`absolute w-full bg-black border border-gray-800 rounded-lg overflow-hidden preserve-3d transition-all duration-500 ease-in-out 
+            className={`absolute w-full bg-white border border-gray-200 rounded-lg overflow-hidden preserve-3d transition-all duration-500 ease-in-out 
               ${activeCard === index ? 'card-active' : ''}`}
             style={{
               height: '400px',
@@ -100,26 +100,26 @@ const StackedProjectCards: React.FC<StackedProjectCardsProps> = ({ projects }) =
               <div className="relative w-full h-full preserve-3d">
                 {/* Front of card (Name) */}
                 <motion.div 
-                  className={`absolute w-full h-full backface-hidden p-6 flex flex-col justify-center items-center bg-black hover-glow
+                  className={`absolute w-full h-full backface-hidden p-6 flex flex-col justify-center items-center bg-white hover-glow
                     ${isFlipped ? 'rotate-y-180' : 'rotate-y-0'}`}
                   animate={{ rotateY: isFlipped ? 180 : 0 }}
                   transition={{ duration: 0.6, ease: "easeInOut" }}
                 >
-                  <h1 className="text-4xl md:text-5xl font-bold text-white name-display mb-2">
+                  <h1 className="text-4xl md:text-5xl font-bold text-portfolio-dark-blue name-display mb-2">
                     {project.title}
                   </h1>
-                  <p className="text-xl text-gray-400 mt-2">{project.category}</p>
+                  <p className="text-xl text-portfolio-muted-gray mt-2">{project.category}</p>
                 </motion.div>
 
                 {/* Back of card (Bio) */}
                 <motion.div 
-                  className={`absolute w-full h-full backface-hidden p-6 flex flex-col justify-center items-center bg-black hover-glow
+                  className={`absolute w-full h-full backface-hidden p-6 flex flex-col justify-center items-center bg-white hover-glow
                     ${isFlipped ? 'rotate-y-0' : 'rotate-y-180'}`}
                   animate={{ rotateY: isFlipped ? 0 : -180 }}
                   transition={{ duration: 0.6, ease: "easeInOut" }}
                 >
-                  <h2 className="text-2xl font-semibold mb-4 text-white">About Me</h2>
-                  <p className="text-lg text-gray-300 text-center">
+                  <h2 className="text-2xl font-semibold mb-4 text-portfolio-dark-blue">About Me</h2>
+                  <p className="text-lg text-portfolio-muted-gray text-center">
                     I'm a passionate graphic designer specializing in UX/UI design, branding, 
                     and book design. My work combines creativity with strategic thinking to 
                     deliver impactful visual experiences.
@@ -135,21 +135,21 @@ const StackedProjectCards: React.FC<StackedProjectCardsProps> = ({ projects }) =
                 <div className="relative w-full h-full">
                   {/* Background image with overlay */}
                   <div 
-                    className="absolute inset-0 bg-center bg-cover opacity-40"
+                    className="absolute inset-0 bg-center bg-cover"
                     style={{ 
                       backgroundImage: `url(${project.thumbnail})`,
                     }}
                   />
                   
-                  {/* Dark overlay gradient */}
-                  <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/90" />
+                  {/* Light overlay gradient */}
+                  <div className="absolute inset-0 bg-gradient-to-b from-white/70 via-white/50 to-white/90" />
                   
                   {/* Content */}
                   <div className="relative z-10 h-full flex flex-col justify-end p-8">
-                    <h2 className="text-2xl md:text-3xl font-bold text-white mb-2">
+                    <h2 className="text-2xl md:text-3xl font-bold text-portfolio-dark-blue mb-2">
                       {project.title}
                     </h2>
-                    <p className="text-gray-400 text-lg">
+                    <p className="text-portfolio-muted-gray text-lg">
                       {project.category}
                     </p>
                   </div>

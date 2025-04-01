@@ -25,7 +25,7 @@ const Index = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-black">
+    <div className="min-h-screen bg-white">
       <GradientBackground className="h-full min-h-screen">
         <div className="container mx-auto px-4 py-10">
           <main className="h-screen flex items-center justify-center">
