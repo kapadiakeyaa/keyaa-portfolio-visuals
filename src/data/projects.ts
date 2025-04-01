@@ -17,24 +17,29 @@ export interface Project {
 export const projects: Project[] = [
   {
     id: 'ux-case-study-1',
-    title: 'Finance App Redesign',
+    title: 'Strave X Spotify',
     category: 'UX Case Study',
     thumbnail: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80',
-    description: 'A comprehensive UX case study for a finance application redesign',
+    description: 'PulseTrack intelligently curates real-time music experiences by analyzing user movement, location, and fitness activities, eliminating the need for manual playlist adjustments.',
     content: {
-      introduction: 'This case study focused on improving the user experience of a financial management application. The goal was to simplify complex financial data visualization and make the app more accessible to users with varying levels of financial literacy.',
+      introduction: 'Using AI-driven analysis, PulseTrack adapts music tempo and genre in real-time to match energy levels, ensuring an immersive and uninterrupted listening experience.',
       images: [
         {
-          url: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80',
-          caption: 'Initial wireframes showing the financial dashboard'
+          url: './UX/PulseTrack/PulseTrack.jpg',
+          //  "url": "./YourFolder/SubFolder/image.jpg"
+          // caption: 'Initial wireframes showing the financial dashboard'
         },
         {
-          url: 'https://images.unsplash.com/photo-1559028012-481c04fa702d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80',
-          caption: 'User testing session results with heatmap overlay'
+          url: '/UX/PulseTrack/PulseTrack1.jpg',
         },
         {
-          url: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80',
-          caption: 'Final design implementation showing improved data visualization'
+          url: '/UX/PulseTrack/PulseTrack2.jpg',
+        }
+        {
+          url: '/UX/PulseTrack/PulseTrack3.jpg',
+        }
+        {
+          url: '/UX/PulseTrack/PulseTrack4.jpg',
         }
       ]
     }
