@@ -32,10 +32,10 @@ const GradientBackground = ({
     )}>
       <div className="absolute inset-0 bg-black opacity-90 z-0"></div>
       <div className={cn(
-        `absolute inset-0 bg-gradient-to-br ${gradient} opacity-20 animate-gradient-shift z-0`,
+        `absolute inset-0 bg-gradient-to-br ${gradient} opacity-30 animate-gradient-shift z-0`,
         className
       )}></div>
-      <div className="relative z-10">
+      <div className="relative z-10 h-full">
         {children}
       </div>
     </div>
