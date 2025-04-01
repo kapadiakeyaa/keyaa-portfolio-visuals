@@ -1,8 +1,8 @@
 
 import React from 'react';
-import ProjectGrid from '@/components/ProjectGrid';
 import { projects } from '@/data/projects';
 import GradientBackground from '@/components/GradientBackground';
+import StackedProjectCards from '@/components/StackedProjectCards';
 
 const Index = () => {
   // Create a name card to add at the beginning of the projects array
@@ -13,7 +13,7 @@ const Index = () => {
     thumbnail: '', // Not needed for name card
   };
 
-  // Convert projects data to format expected by ProjectGrid
+  // Convert projects data to format expected by StackedProjectCards
   const projectCards = [
     nameCard, // Add the name card as the first item
     ...projects.map(project => ({
@@ -29,8 +29,8 @@ const Index = () => {
       <GradientBackground className="h-full min-h-screen">
         <div className="container mx-auto px-4 py-10">
           <main className="h-screen flex items-center justify-center">
-            <section className="animate-fade-in" style={{ animationDelay: '0.2s' }}>
-              <ProjectGrid projects={projectCards} />
+            <section className="animate-fade-in w-full" style={{ animationDelay: '0.2s' }}>
+              <StackedProjectCards projects={projectCards} />
             </section>
           </main>
         </div>
