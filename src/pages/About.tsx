@@ -15,7 +15,7 @@ const About = () => {
           
           <main className="space-y-8 animate-fade-in" style={{ animationDelay: '0.2s' }}>
             <p className="text-xl leading-relaxed text-portfolio-deep-navy">
-              I'm Keyaa Kapadia, a graphic designer with a passion for creating clean, structured, and intentional visual solutions. My approach combines analytical thinking with creative intuition to develop designs that are both aesthetically pleasing and functionally effective.
+            I'm Keyaa Kapadia, a designer from Mumbai, India, currently based in New York City. My work is deeply rooted in intentional design, drawing inspiration from nostalgia, as well as the people and places that shape my surroundings. I strive to create visually compelling and thoughtfully structured designs that blend creativity with purpose.
             </p>
             
             <p className="text-xl leading-relaxed text-portfolio-deep-navy">
