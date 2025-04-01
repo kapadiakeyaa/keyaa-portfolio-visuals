@@ -9,7 +9,7 @@ const Index = () => {
   const nameCard = {
     id: 'name-card',
     title: 'Keyaa Kapadia',
-    category: 'Graphic Designer',
+    category: 'Designer',
     thumbnail: '', // Not needed for name card
   };
 
